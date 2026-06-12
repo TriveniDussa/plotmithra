@@ -3,7 +3,7 @@ import Navbar from "../Common/Navbar";
 import Footer from "../Common/Footer";
 import PropertyGallery from "./PropertyGallery";
 import properties from "../../data/properties";
-import { FaMapMarkerAlt, FaBed, FaBath, FaRulerCombined, FaCar, FaWhatsapp, FaPhone } from "react-icons/fa";
+import { FaMapMarkerAlt, FaBed, FaBath, FaRulerCombined, FaCar, FaWhatsapp, FaPhone, FaDirections } from "react-icons/fa";
 
 const WHATSAPP_NUMBER = "918790796753"; // your number with country code
 
@@ -15,6 +15,11 @@ function PropertyDetails() {
   const handleWhatsApp = () => {
     const text = `Hi! I'm interested in the property: *${property.title}* located at ${property.location} priced at ${property.price}. Please share more details.`;
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+  };
+
+  const handleViewLocation = () => {
+    const query = encodeURIComponent(property.location);
+    window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, "_blank");
   };
 
   if (!property) {
@@ -35,17 +40,27 @@ function PropertyDetails() {
 
         <div className="prop-details-inner">
 
-          <PropertyGallery />
+          <PropertyGallery images={property.images} />
 
           <div className="prop-details-content">
 
             <div className="prop-details-top">
               <div>
-                <span className="prop-details-tag">{property.tag || "For Sale"}</span>
+                <span
+                  className="prop-details-tag"
+                  style={{ background: property.tag === "For Rent" ? "#E67E22" : "#0B1F3A" }}
+                >
+                  {property.tag || "For Sale"}
+                </span>
                 <h1>{property.title}</h1>
-                <p className="prop-details-location">
-                  <FaMapMarkerAlt /> {property.location}
-                </p>
+                <div className="prop-location-row">
+                  <p className="prop-details-location">
+                    <FaMapMarkerAlt /> {property.location}
+                  </p>
+                  <button className="location-btn" onClick={handleViewLocation}>
+                    <FaDirections /> View on Map
+                  </button>
+                </div>
               </div>
               <div className="prop-details-price">{property.price}</div>
             </div>
@@ -53,18 +68,18 @@ function PropertyDetails() {
             <div className="prop-stats">
               <div className="stat-box">
                 <FaBed className="stat-icon" />
-                <h3>3</h3>
+                <h3>{property.beds ?? "—"}</h3>
                 <p>Bedrooms</p>
               </div>
               <div className="stat-box">
                 <FaBath className="stat-icon" />
-                <h3>2</h3>
+                <h3>{property.baths ?? "—"}</h3>
                 <p>Bathrooms</p>
               </div>
               <div className="stat-box">
                 <FaRulerCombined className="stat-icon" />
-                <h3>2200</h3>
-                <p>Sq.ft</p>
+                <h3>{property.area || "—"}</h3>
+                <p>Area</p>
               </div>
               <div className="stat-box">
                 <FaCar className="stat-icon" />
@@ -138,7 +153,6 @@ function PropertyDetails() {
 
         .prop-details-tag {
           display: inline-block;
-          background: #0B1F3A;
           color: white;
           padding: 5px 14px;
           border-radius: 6px;
@@ -154,6 +168,13 @@ function PropertyDetails() {
           margin: 0 0 10px;
         }
 
+        .prop-location-row {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+
         .prop-details-location {
           display: flex;
           align-items: center;
@@ -161,6 +182,27 @@ function PropertyDetails() {
           color: #666;
           font-size: 15px;
           margin: 0;
+        }
+
+        .location-btn {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          background: #EEF2FF;
+          color: #2F55D4;
+          border: 1.5px solid #D6E0FF;
+          padding: 6px 14px;
+          border-radius: 20px;
+          font-size: 13px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background 0.2s, transform 0.2s;
+        }
+
+        .location-btn:hover {
+          background: #2F55D4;
+          color: white;
+          transform: translateY(-1px);
         }
 
         .prop-details-price {
@@ -191,7 +233,7 @@ function PropertyDetails() {
           margin-bottom: 8px;
         }
 
-        .stat-box h3 { color: #0B1F3A; font-size: 24px; margin: 0 0 4px; }
+        .stat-box h3 { color: #0B1F3A; font-size: 22px; margin: 0 0 4px; }
         .stat-box p { color: #888; font-size: 13px; margin: 0; }
 
         .prop-section { margin-bottom: 28px; }
@@ -259,6 +301,7 @@ function PropertyDetails() {
           .prop-stats { grid-template-columns: repeat(2, 1fr); }
           .prop-details-buttons { flex-direction: column; }
           .prop-details-content { padding: 24px 18px; }
+          .prop-location-row { flex-direction: column; align-items: flex-start; gap: 10px; }
         }
       `}</style>
     </>

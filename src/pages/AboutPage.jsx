@@ -1,7 +1,7 @@
 import Navbar from "../components/Common/Navbar";
 import Footer from "../components/Common/Footer";
 import WhatsAppButton from "../components/Common/WhatsAppButton";
-import { FaCheckCircle, FaHandshake, FaShieldAlt, FaStar, FaHome, FaUsers, FaTrophy, FaArrowRight, FaRocket, FaBullseye, } from "react-icons/fa";
+import { FaCheckCircle, FaHandshake, FaShieldAlt, FaStar, FaHome, FaUsers, FaTrophy, FaArrowRight, FaRocket, FaBullseye, FaPlay } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import about1 from "../assets/images/about1.jpg";
 import about2 from "../assets/images/about2.jpg";
@@ -96,6 +96,28 @@ function AboutPage() {
           <div className="ab-img-badge">
             <div className="ab-img-badge-num">12+</div>
             <div className="ab-img-badge-text">Years of Excellence</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Video Section ── */}
+      <section className="ab-video">
+        <div className="ab-video-header">
+          <span className="ab-section-eyebrow">SEE IT IN ACTION</span>
+          <h2>Why <span className="ab-gold">Smart Investors</span> Choose Real Estate</h2>
+          <p>Watch how PlotMithra helps you make confident, informed property decisions</p>
+        </div>
+
+        <div className="ab-video-wrap">
+          <div className="ab-video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/FVfws54AxUI?si=YAxVK9d8_Tw6wwTu"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </section>
@@ -314,10 +336,52 @@ function AboutPage() {
         }
         .ab-img-badge-text { font-size: 12px; font-weight: 600; margin-top: 4px; }
 
+        /* ── Video Section ── */
+        .ab-video {
+          padding: 90px 8%;
+          background: #F8F9FC;
+        }
+        .ab-video-header {
+          text-align: center;
+          margin-bottom: 44px;
+        }
+        .ab-video-header h2 {
+          font-size: 36px;
+          font-weight: 800;
+          color: #0B1F3A;
+          margin: 10px 0 12px;
+          line-height: 1.3;
+        }
+        .ab-video-header p {
+          color: #666;
+          font-size: 15px;
+          max-width: 560px;
+          margin: 0 auto;
+        }
+        .ab-video-wrap {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .ab-video-frame {
+          position: relative;
+          width: 100%;
+          padding-top: 56.25%; /* 16:9 aspect ratio */
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        .ab-video-frame iframe {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+
         /* ── Values ── */
         .ab-values {
           padding: 90px 8%;
-          background: #F8F9FC;
+          background: white;
         }
         .ab-values-header, .ab-why-header, .ab-team-header {
           text-align: center;
@@ -335,7 +399,7 @@ function AboutPage() {
           gap: 24px;
         }
         .ab-value-card {
-          background: white;
+          background: #F8F9FC;
           padding: 36px 28px;
           border-radius: 18px;
           box-shadow: 0 4px 20px rgba(0,0,0,0.07);
@@ -350,7 +414,7 @@ function AboutPage() {
         /* ── Why ── */
         .ab-why {
           padding: 90px 8%;
-          background: white;
+          background: #F8F9FC;
         }
         .ab-why-grid {
           display: grid;
@@ -358,7 +422,7 @@ function AboutPage() {
           gap: 24px;
         }
         .ab-why-card {
-          background: #F8F9FC;
+          background: white;
           border-radius: 16px;
           padding: 28px 24px;
           border: 1.5px solid #eee;
@@ -433,9 +497,11 @@ function AboutPage() {
         }
         @media (max-width: 768px) {
           .ab-hero-content h1 { font-size: 34px; }
+          .ab-video-header h2 { font-size: 26px; }
           .ab-values-grid, .ab-why-grid, .ab-team-grid { grid-template-columns: 1fr; }
           .ab-cta-btns { flex-direction: column; align-items: center; }
           .ab-about { padding: 60px 5%; }
+          .ab-video { padding: 60px 5%; }
         }
       `}</style>
     </>
