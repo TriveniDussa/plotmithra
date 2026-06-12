@@ -33,7 +33,7 @@ function Navbar() {
 
           <div className="logo1">
             <h2>
-              Plot<span>Mithra</span>
+              SmartPlot<span>Mithra</span>
             </h2>
 
             <p>Your Trusted Property Partner</p>

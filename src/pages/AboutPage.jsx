@@ -55,7 +55,7 @@ function AboutPage() {
         <div className="ab-hero-overlay" />
         <div className="ab-hero-content">
           <span className="ab-eyebrow">WHO WE ARE</span>
-          <h1>About <span className="ab-gold">PlotMithra</span></h1>
+          <h1>About <span className="ab-gold">SmartPlotMithra</span></h1>
           <p>Your trusted partner in finding the perfect property across India</p>
         </div>
       </section>

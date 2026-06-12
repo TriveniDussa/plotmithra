@@ -18,7 +18,7 @@ function Footer() {
           <div className="footer-box">
 
             <h2>
-              Plot<span>Mithra</span>
+              SmartPlot<span>Mithra</span>
             </h2>
 
             <p>
@@ -89,7 +89,7 @@ function Footer() {
             <div className="contact-item">
               <FaEnvelope />
               <span>
-                support@plotmithra.com
+                support@smartplotmithra.com
               </span>
             </div>
 
