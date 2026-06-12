@@ -16,7 +16,7 @@ import rent5 from "../assets/images/rent5.jpg";
 import rent6 from "../assets/images/rent6.jpg";
 
 
-const WHATSAPP_NUMBER = "918790796753";
+const WHATSAPP_NUMBER = "919391275906";
 
 function RentPage() {
   const navigate = useNavigate();

@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import about1 from "../assets/images/about1.jpg";
 
-const WHATSAPP_NUMBER = "918790796753";
+const WHATSAPP_NUMBER = "919391275906";
 
 function SellPage() {
   const [form, setForm] = useState({
@@ -92,7 +92,7 @@ function SellPage() {
             <FaPhoneAlt className="sell-contact-icon" />
             <div>
               <div className="sell-contact-label">Need help listing?</div>
-              <div className="sell-contact-num">+91 87907 96753</div>
+              <div className="sell-contact-num">+91 93912 75906</div>
             </div>
           </div>
         </div>
