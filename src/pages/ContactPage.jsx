@@ -4,7 +4,7 @@ import Footer from "../components/Common/Footer";
 import { FaUser, FaEnvelope, FaPhone, FaCommentDots, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import heroImage from "../assets/images/hero.jpg";
 
-const WHATSAPP_NUMBER = "918790796753"; // your number with country code, no +
+const WHATSAPP_NUMBER = "919391275906"; // your number with country code, no +
 
 function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
@@ -51,7 +51,7 @@ function ContactPage() {
               <div className="info-icon-wrap"><FaPhone /></div>
               <div>
                 <h4>Call Us</h4>
-                <p>+91 87907 96753</p>
+                <p>+91 93912 75906</p>
                 <span>Mon–Sat, 9am – 7pm</span>
               </div>
             </div>
@@ -60,7 +60,7 @@ function ContactPage() {
               <div className="info-icon-wrap"><FaEnvelope /></div>
               <div>
                 <h4>Email Us</h4>
-                <p>support@plotmithra.com</p>
+                <p>support@smartplot.in</p>
                 <span>We reply within 24 hours</span>
               </div>
             </div>
@@ -78,7 +78,7 @@ function ContactPage() {
               <div className="info-icon-wrap wa-icon"><FaWhatsapp /></div>
               <div>
                 <h4>WhatsApp</h4>
-                <p>+91 87907 96753</p>
+                <p>+91 93912 75906</p>
                 <span>Quick replies on chat</span>
               </div>
             </div>

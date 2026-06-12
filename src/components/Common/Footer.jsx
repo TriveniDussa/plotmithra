@@ -29,11 +29,11 @@ function Footer() {
 
             <div className="social-icons">
 
-              <a href="#">
+              <a href="https://www.facebook.com/smartplot.design" target="_blank">
                 <FaFacebookF />
               </a>
 
-              <a href="#">
+              <a href="https://www.instagram.com/smartplot.design/" target="_blank">
                 <FaInstagram />
               </a>
 
@@ -83,13 +83,13 @@ function Footer() {
 
             <div className="contact-item">
               <FaPhoneAlt />
-              <span>+91 98765 43210</span>
+              <span>+91 93912 75906</span>
             </div>
 
             <div className="contact-item">
               <FaEnvelope />
               <span>
-                support@smartplotmithra.com
+                support@smartplot.in
               </span>
             </div>
 
@@ -105,7 +105,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          © 2026 PlotMithra. All Rights Reserved.
+          © 2026 SmartPlotMithra. All Rights Reserved.
         </div>
 
       </footer>

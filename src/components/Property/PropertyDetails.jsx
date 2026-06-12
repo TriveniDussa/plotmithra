@@ -5,7 +5,7 @@ import PropertyGallery from "./PropertyGallery";
 import properties from "../../data/properties";
 import { FaMapMarkerAlt, FaBed, FaBath, FaRulerCombined, FaCar, FaWhatsapp, FaPhone, FaDirections } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "918790796753"; // your number with country code
+const WHATSAPP_NUMBER = "919391275906"; // your number with country code
 
 function PropertyDetails() {
   const { id } = useParams();

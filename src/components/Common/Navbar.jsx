@@ -105,7 +105,7 @@ function Navbar() {
             </div>
 
             <div>
-              <h4>+91 87907 96753</h4>
+              <h4>+91 93912 75906</h4>
               <p>Call Us Anytime</p>
             </div>
           </div>
