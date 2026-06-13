@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/images/smartplott.png";
+import logo from "../../assets/images/logo3.png";
 import { FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
@@ -33,7 +33,7 @@ function Navbar() {
 
           <div className="logo1">
             <h2>
-              SmartPlot<span>Mithra</span>
+              Plot<span>Mithra</span>
             </h2>
 
             <p>Your Trusted Property Partner</p>
@@ -161,12 +161,12 @@ function Navbar() {
         }
 
         .logo-section img{
-          width:100px;
-          height:100px;
+          width:170px;
+          height:170px;
           object-fit:contain;
           margin-top:10px;
           flex-shrink:0;
-          margin-left:-10px
+          
         }
 
         .logo1{
@@ -179,7 +179,7 @@ function Navbar() {
           font-size:32px;
           font-weight:700;
           white-space:nowrap;
-          margin-left:40px;
+         
         }
 
         .logo-section span{
@@ -190,7 +190,7 @@ function Navbar() {
           margin:0;
           color:#666;
           font-size:13px;
-          margin-left:40px;
+          
         }
 
         .nav-links{
@@ -332,7 +332,7 @@ function Navbar() {
 
           .logo-section h2{
             font-size:24px;
-            margin-left:10px;
+            
           }
 
           .nav-links{
@@ -374,7 +374,7 @@ function Navbar() {
 
           .logo-section h2{
             font-size:20px;
-            margin-left:10px;
+            
           }
 
           .logo-section p{

@@ -55,7 +55,7 @@ function AboutPage() {
         <div className="ab-hero-overlay" />
         <div className="ab-hero-content">
           <span className="ab-eyebrow">WHO WE ARE</span>
-          <h1>About <span className="ab-gold">SmartPlotMithra</span></h1>
+          <h1>About <span className="ab-gold">PlotMithra</span></h1>
           <p>Your trusted partner in finding the perfect property across India</p>
         </div>
       </section>
@@ -78,7 +78,7 @@ function AboutPage() {
         <div className="ab-about-text">
           <span className="ab-section-eyebrow">OUR STORY</span>
           <h2>Building Trust in <span className="ab-gold">Real Estate</span></h2>
-          <p>SmartPlotMithra is a modern real estate platform dedicated to helping buyers, sellers, and investors find the perfect property. We provide verified listings, premium plots, villas, apartments, and commercial spaces across India.</p>
+          <p>PlotMithra is a modern real estate platform dedicated to helping buyers, sellers, and investors find the perfect property. We provide verified listings, premium plots, villas, apartments, and commercial spaces across India.</p>
           <p>Our mission is to simplify property transactions with transparency, trust, and technology-driven solutions — making the dream of owning a home a reality for thousands of families.</p>
           <ul className="ab-checklist">
             <li><FaCheckCircle className="ab-check-icon" /> 100% verified property listings</li>

@@ -18,7 +18,7 @@ function Footer() {
           <div className="footer-box">
 
             <h2>
-              SmartPlot<span>Mithra</span>
+              Plot<span>Mithra</span>
             </h2>
 
             <p>
@@ -105,7 +105,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          © 2026 SmartPlotMithra. All Rights Reserved.
+          © 2026 PlotMithra. All Rights Reserved.
         </div>
 
       </footer>
